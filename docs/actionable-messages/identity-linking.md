@@ -12,6 +12,8 @@ ms.subservice: o365-connectors
 
 # Link Azure Active Directory identity with your own identity provider (Preview)
 
+[!INCLUDE [global-onboarding-paused-notice](../includes/actionable-messages/global-onboarding-paused-notice.md)]
+
 [Action.Http](adaptive-card.md#actionhttp) actions in actionable messages include an Azure AD-issued token in the `Authorization` header, which provides information about the user's identity. However, this information may not be sufficient to authenticate the user to your service. With identity linking, you can signal the Outlook client to present UI to allow the user to authenticate with your service. Once the user authenticates, you can associate their Azure AD identity with your own to allow for seamless authentication for future requests.
 
 ## Using identity linking
@@ -78,7 +80,7 @@ After Outlook receives the redirect back from your authentication server, it imm
 
 ## Example
 
-You can use the following sample card in the [Card Playground](https://messagecardplayground.azurewebsites.net/) to see this in action. The endpoint in this card will prompt you to login to the Microsoft identity platform and (with your consent) will make a Graph request to [get your profile](/graph/api/user-get?view=graph-rest-1.0&preserve-view=true). The code for this endpoint is available as a sample on [GitHub](https://github.com/OfficeDev/outlook-actionable-messages-identity-linking).
+You can use the following sample card in the [Actionable Message Designer](https://amdesigner.azurewebsites.net/) to see this in action. The endpoint in this card will prompt you to login to the Microsoft identity platform and (with your consent) will make a Graph request to [get your profile](/graph/api/user-get?view=graph-rest-1.0&preserve-view=true). The code for this endpoint is available as a sample on [GitHub](https://github.com/OfficeDev/outlook-actionable-messages-identity-linking).
 
 ```json
 {

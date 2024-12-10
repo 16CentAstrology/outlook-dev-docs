@@ -2,13 +2,15 @@ items:
 - name: Overview
   href: index.md
 - name: Get Started
+  href: get-started.md
+- name: Universal Action Model
   items:
-  - name: Get started with actionable messages
-    href: get-started.md
-  - name: Actionable Messages via Email
-    href: send-via-email.md
-  - name: Actionable Messages via Connectors
-    href: send-via-connectors.md
+  - name: Overview of Universal Action Model
+    href: universal-action-model.md
+  - name: Universal Action Model sample - Approvals
+    href: adaptive-card-expense-approval-sample.md
+  - name: Universal Action Model sample - Project Management
+    href: adaptive-card-project-management-sample.md
 - name: Concepts
   items:
   - name: Identity linking
@@ -25,9 +27,9 @@ items:
   href: email-dev-dashboard.md
 - name: Connectors Developer Dashboard
   href: connectors-dev-dashboard.md
-- name: Card Playground
-  href: https://messagecardplayground.azurewebsites.net/
-- name: Adaptive Card Designer
+- name: Actionable Messages FAQs
+  href: actionable-messages-faq.md
+- name: Actionable Message Designer
   href: https://amdesigner.azurewebsites.net/
 - name: MessageCard Reference (Legacy)
   href: message-card-reference.md

@@ -12,11 +12,13 @@ ms.subservice: o365-connectors
 
 # Register your service with the actionable email developer dashboard
 
+[!INCLUDE [global-onboarding-paused-notice](../includes/actionable-messages/global-onboarding-paused-notice.md)]
+
 To test and publish actionable messages from your service, you need to provide certain information to Microsoft to enable this functionality for emails from your service. The [developer dashboard](https://aka.ms/publishoam) helps you submit and track status of your submission via the web portal.
 
 > [!NOTE]
 > You can easily try out actionable messages via email by sending email to yourself with the required markup without any intervention from Microsoft. This would typically be the first step you try out as you dip your toes into this capability.
-> Check out [these samples](send-via-email.md#sending-the-message) to send an actionable message to your mailbox, or use the [Card Playground](https://messagecardplayground.azurewebsites.net/) to send an actionable message to yourself.
+> Check out [these samples](send-via-email.md#sending-the-message) to send an actionable message to your mailbox, or use the [Actionable Message Designer](https://amdesigner.azurewebsites.net/) to send an actionable message to yourself.
 
 If you are a developer working with actionable messages via email, you will use the portal for the following cases:
 
@@ -47,7 +49,20 @@ The key fields are:
   </RSAKeyValue>
   ```
 
-  For an example of how to get public key XML from  a .cert file, see [PublicKey Class](/dotnet/api/system.security.cryptography.x509certificates.publickey#examples).
+A RSA key pair can be generated and exported in the correct format using PowerShell (7.3 or later):
+
+``` powershell
+# Generate a key pair:
+$rsa = [System.Security.Cryptography.RSA]::Create();
+
+# Private Key, ensure this is saved securely and kept secret:
+$rsa.ToXmlString($true)
+
+## Public Key, copy output to dashboard:
+$rsa.ToXmlString($false)
+```
+
+For an example of how to get public key XML from  a .cert file, see [PublicKey class](/dotnet/api/system.security.cryptography.x509certificates.publickey#examples).
 
 > [!NOTE]
 > Once your submission is approved, it may take some time to take effect. If you encounter the error below when sending signed cards, and you're sure that your payload is correct, please try again after a few hours.
@@ -67,7 +82,7 @@ In this section, you need to specify at what scope you want to enable actionable
 Each of the above are independent steps. i.e. you can pick only one scope for each submission and will be subject to the approval process by Microsoft.
 
 > [!NOTE]
-> Remember, you can easily try out actionable messages by sending an email to yourself with the required markup without any intervention from Microsoft. You can use the [Card Playground](https://messagecardplayground.azurewebsites.net/) to send to yourself without writing any code. This would typically be the first step to try out actionable messages.
+> Remember, you can easily try out actionable messages by sending an email to yourself with the required markup without any intervention from Microsoft. You can use the [Actionable Message Designer](https://amdesigner.azurewebsites.net/) to send to yourself without writing any code. This would typically be the first step to try out actionable messages.
 
 #### Self-service registration
 

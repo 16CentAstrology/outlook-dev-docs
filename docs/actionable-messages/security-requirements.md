@@ -12,6 +12,8 @@ ms.subservice: o365-connectors
 
 # Security requirements for actionable messages in Office 365
 
+[!INCLUDE [global-onboarding-paused-notice](../includes/actionable-messages/global-onboarding-paused-notice.md)]
+
 Securing actionable email is simple and easy. There are two phases within the end-to-end experience that impose security requirements on your service when supporting actionable messages with Office 365. The phases and their corresponding requirements are as follows.
 
 1. Send phase: The pre-requisites for your service to send actionable messages are as follows:
@@ -135,7 +137,7 @@ Please refer to the Microsoft code samples provided below, which show how to do 
 
 ### Action-Authorization header
 
-The use of `Authorization` header by Actionable messages may interfere with existing authentication/authorization mechanism for the target endpoint. In this case, developers can set the `Authorization` header to `null` or an empty string in the `headers` property of an `Action.Http` action. Actionable messages will then send the same bearer token via `Action-Authorization` header instead of using `Authorization` header.
+The use of `Authorization` header by Actionable messages may interfere with existing authentication/authorization mechanism for the target endpoint. In this case, developers can set the `Authorization` header to an empty string in the `headers` property of an `Action.Http` action. Actionable messages will then send the same bearer token via `Action-Authorization` header instead of using `Authorization` header.
 
 > [!TIP]
 > The Azure Logic App service returns `HTTP 401 Unauthorized` if the `Authorization` header contains the bearer token set by actionable messages.

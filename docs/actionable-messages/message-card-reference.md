@@ -15,16 +15,16 @@ ms.subservice: o365-connectors
 # Legacy actionable message card reference
 
 > [!NOTE]
-> This document describes the original JSON format for the actionable message card format. For actionable messages sent via email, this has been replaced with the [Adaptive Card format](adaptive-card.md). Microsoft recommends that new actionable message integrations use the Adaptive Card format, and existing integrations consider updating to Adaptive Card format. The Adaptive Card format is **required** to support Outlook on iOS and Android. However, if you are sending actionable messages via an Office connector, or to a Microsoft Teams connector, you must continue to use the message card format.
+> This document describes the original JSON format for the actionable message card format. For actionable messages sent via email, this has been replaced with the [Adaptive Card format](adaptive-card.md). Microsoft recommends that new actionable message integrations use the Adaptive Card format, and existing integrations consider updating to Adaptive Card format. The Adaptive Card format is **required** to support Outlook on iOS and Android.
 
 Cards are meant to provide easy to read, at-a-glance information that users can very quickly decipher and act upon when appropriate. As such, the guiding principle for designing great card is "content over chrome," which means cards are straight to the point and minimize the use of anything that would be distracting such as icons or custom colors.
 
-## Card playground
+## Actionable Message Designer
 
-Ready to experiment with your card design? Head to the [Card Playground](https://messagecardplayground.azurewebsites.net/) which allows you to see what your card will look like as you edit the associated JSON payload.
+Ready to experiment with your card design? Head to the [Actionable Message Designer](https://amdesigner.azurewebsites.net/) which allows you to see what your card will look like as you edit the associated JSON payload.
 
 > [!NOTE]
-> The Card Playground loads Adaptive Card examples by default. You can find message card format examples by selecting the **Select a sample** dropdown in the playground.
+> The Actionable Message Designer loads Adaptive Card examples by default. You can add you Message card JSON to get a preview.
 
 ## Design guidelines
 
